@@ -1,0 +1,28 @@
+1 — Hardware & wiring (what you need)
+
+Raspberry Pi 5 (or any Pi with GPIO)
+
+HC-SR04 or waterproof ultrasonic sensor (JSN/HC variant)
+
+Jumper wires
+
+Breadboard (optional)
+
+1 × 1kΩ and 1 × 2kΩ resistors (voltage divider for Echo if needed)
+
+Power: USB power bank / standard Pi power
+
+Wiring (BCM pin numbers example):
+
+TRIG → GPIO 23 (BCM)
+
+ECHO → GPIO 24 (BCM) — use voltage divider if sensor Echo outputs 5V to protect Pi 3.3V
+
+VCC → 5V or 3.3V (depending on sensor)
+
+GND → GND
+
+Quick voltage divider (if echo is 5V):
+
+ECHO → 2kΩ → Pi GPIO
+between ECHO and Pi GPIO connect 1kΩ to GND (forms divider: 5V * 1/(1+2) ≈ 1.67V — adjust with proper resistor values e.g. 1k/2k yields ~1.67V, prefer 2k/1k for ~3.3V; follow sensor docs).
