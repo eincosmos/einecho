@@ -33,7 +33,5 @@ This MVP lays the foundation for a future autonomous drone-based pothole and wat
 - **Data:** CSV logs for model training and visualization  
 - **Future Scope:** TensorFlow / PyTorch integration for AI-based hazard classification  
 
----
 
-## 🧩 Project Structure
 
